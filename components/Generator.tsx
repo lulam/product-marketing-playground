@@ -7,7 +7,7 @@ const Generator = () => {
 
   return (
     <div>
-      <h1 className='max-sm:pt-110 text-xl/6 overflow-hidden max-2xl:pt-120'>
+      <h1 className='pt-110 text-xl/6 overflow-hidden'>
         Develop key messaging for a wellness app targeting fitness enthusiasts
       </h1>
     </div>

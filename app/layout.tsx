@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 const switzer = localFont({
   src: [
     {
-      path: './font/Switzer-Light.woff',
+      path: '../public/font/Switzer-Light.woff',
       weight: '100',
       style: 'light',
     },
     {
-      path: './font/Switzer-Regular.woff',
+      path: '../public/font/Switzer-Regular.woff',
       weight: '400',
       style: 'regular',
     },
@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={switzer.className}>
-      <body className='max-sm:ml-16 mr-16 max-md:ml-32 mr-32 max-xl:ml-56 mr-56 max-2xl:ml-12 mr-12'>
+      <body className='ml-16 mr-16'>
         <Navbar />
         <main className='relative overflow-hidden'>{children}</main>
         <Footer />
