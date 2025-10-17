@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={switzer.className}>
-      <body className='ml-16 mr-16'>
+      <body className='ml-16 mr-16 overflow-hidden'>
         <Navbar />
         <main className='relative overflow-hidden'>{children}</main>
         <Footer />

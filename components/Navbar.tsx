@@ -28,8 +28,12 @@ const Navbar = () => {
     <nav className='flexBetween flex flex-row flex-nowrap justify-between mt-12'>
       <Link href='/'>
         <div className='text-lg flex flex-col flex-nowrap'>
-          <h2 className={gambarino.className}>Product Marketing Playground</h2>
-          <p className={`${switzerLight.className} pt-1 text-md text-gray-600`}>
+          <h2 className={`${gambarino.className} max-sm:text-md`}>
+            Product Marketing Playground
+          </h2>
+          <p
+            className={`${switzerLight.className} text-md/1
+             text-gray-600 max-sm:text-sm max-sm:mr-50 max-md:mr-40`}>
             Take on challenges where you're the lead product marketer
           </p>
         </div>
