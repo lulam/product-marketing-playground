@@ -59,7 +59,13 @@ const Generator = () => {
       <div className='flex flex-col'>
         <h1
           className={`${switzerLight.className} text-base/4.5 2xl:text-4xl 2xl:pr-220 xl:text-4x lg:text-4xl md:text-2xl md:pr-40 lg:pr-90`}>
-          <Typewriter text={currentPrompt} speed={40} cursorChar={' '} />
+          <Typewriter
+            text={currentPrompt}
+            speed={40}
+            cursorChar={' '}
+            deleteSpeed={30}
+            loop={false}
+          />
         </h1>
       </div>
     </div>
