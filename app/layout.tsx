@@ -31,10 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={switzer.className}>
-      <body className='ml-16 mr-16 overflow-hidden'>
+    <html lang='en' className={`${switzer.className} w-screen h-screen`}>
+      <body className='ml-16 mr-16 sm:ml-8 sm:mr-8'>
         <Navbar />
-        <main className='relative overflow-hidden'>{children}</main>
+        <main className='relative'>{children}</main>
         <Footer />
       </body>
     </html>
