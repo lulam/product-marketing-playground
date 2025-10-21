@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { tasks } from '@/app/data/prompts';
+import Typewriter from './fancy/text/typewriter';
 
 const switzerLight = localFont({
   src: [
@@ -58,7 +59,7 @@ const Generator = () => {
       <div className='flex flex-col'>
         <h1
           className={`${switzerLight.className} text-base/4.5 2xl:text-4xl 2xl:pr-220 xl:text-4x lg:text-4xl md:text-2xl md:pr-40 lg:pr-90`}>
-          {currentPrompt}
+          <Typewriter text={currentPrompt} speed={40} cursorChar={' '} />
         </h1>
       </div>
     </div>
