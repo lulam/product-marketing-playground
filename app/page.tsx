@@ -2,13 +2,12 @@
 
 import './globals.css';
 import Generator from '@/components/Generator';
-import About from '@/components/About';
+// import About from '@/components/About';
 
 export default function Home() {
   return (
     <main>
       <Generator />
-      <About />
     </main>
   );
 }
