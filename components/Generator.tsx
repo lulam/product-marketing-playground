@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { tasks } from '@/app/data/prompts';
 import Typewriter from './fancy/text/typewriter';
+// import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 const switzerLight = localFont({
   src: [
@@ -18,6 +19,7 @@ const switzerLight = localFont({
 const Generator = () => {
   const [currentPrompt, setCurrentPrompt] = useState<string>('');
   const [currentTopic, setCurrentTopic] = useState<string>('');
+  const [promptId, setPromptId] = useState<number>(0);
 
   const generatePrompt = () => {
     const allPrompts = tasks.flatMap(task =>
@@ -27,11 +29,14 @@ const Generator = () => {
       }))
     );
 
+    if (allPrompts.length === 0) return;
+
     const randomIndex = Math.floor(Math.random() * allPrompts.length);
     const chosen = allPrompts[randomIndex];
 
     setCurrentPrompt(chosen.prompts);
     setCurrentTopic(chosen.topic);
+    setPromptId(prev => prev + 1);
   };
 
   useEffect(() => {
@@ -60,6 +65,7 @@ const Generator = () => {
         <h1
           className={`${switzerLight.className} text-base/4.5 2xl:text-4xl 2xl:pr-220 xl:text-4x lg:text-4xl md:text-2xl md:pr-40 lg:pr-90`}>
           <Typewriter
+            key={promptId}
             text={currentPrompt}
             speed={40}
             cursorChar={' '}
@@ -73,5 +79,3 @@ const Generator = () => {
 };
 
 export default Generator;
-
-// max-2xl:font-normal m-18 pt-120 pr-40 text-4xl flex-row flex-wrap max-md:pt-20
